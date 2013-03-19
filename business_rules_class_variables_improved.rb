@@ -61,4 +61,4 @@ end
 cmd = CompositeCommand.new 10
 BusinessRules.constants.each {|constant| cmd.add_commmand "BusinessRules::#{constant}".constantize.send(:new) }
 cmd.execute
-p cmd.result # ~> 50
+p cmd.result # ~> 10*0.1+50=51
